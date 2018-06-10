@@ -24,25 +24,23 @@ export class HelpFeedback extends React.Component <IHelpFeedbackProps, any> {
             Emocionais:
           </div>
           <ul style={{fontSize: '20px'}}>
-            <li>Parceria com Frente Universitária de Saúde Mental (FUSM)</li>
-            <li>Workshop com profissionais da saúde</li>
-            <li>Indicação de profissionais</li>
+            <li>Procure a Frente Universitária de Saúde Mental (FUSM): Contatos:</li>
+            <li>Workshop com profissionais da saúde. Links: </li>
+            <li>Indicação de profissionais. Links:</li>
           </ul>
           <div style={{display: "flex", fontSize: '40px', marginLeft: '50px'}}>
             Financeiros:
           </div>
           <ul style={{fontSize: '20px'}}>
-            <li>Indicação de bolsas de permanência</li>
-            <li>Parceria com institutos para indicação de projetos na USP com bolsas.</li>
-            <li>Santander é parceiro da USP, fornece bolsas de auxílio - Possibilidade</li>
-            <li>SAS - Serviço de Assistência Social</li>
-            <li>Parceria com a AEP</li>
+            <li>Bolsas de permanência disponíveis:</li>
+            <li>Projetos remunerados da USP:</li>
+            <li>Contato do SAS - Serviço de Assistência Social</li>
           </ul>
           <div style={{display: "flex", fontSize: '40px', marginLeft: '50px'}}>
             Acadêmico:
           </div>
           <ul style={{fontSize: '20px'}}>
-            <li>Agendar aulas de reforços com os monitores e professores</li>
+            <li>Agendamento de aulas de reforço: Links:</li>
           </ul>
           </React.Fragment>
           :

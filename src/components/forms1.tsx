@@ -141,7 +141,9 @@ export class Form1 extends React.Component <IForm1Props, IForm1State> {
                         />                    
                     </label>
                 </div>
-                <Button style={{paddingBottom:"10px", paddingLeft:"10px"}} onClick={this.handleSendData}>Prosseguir</Button>
+                <div style={{paddingBottom:"10px", paddingLeft:"10px"}}>
+                    <Button onClick={this.handleSendData}>Prosseguir</Button>
+                </div>
          </div>
       </React.Fragment>
     );
