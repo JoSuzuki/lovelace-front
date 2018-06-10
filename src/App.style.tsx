@@ -1,33 +1,31 @@
 import styled from 'styled-components';
 
-export const WinOverlay = styled.div`
+export const RadioSpan = styled.span`
   position: absolute;
-  height: 354px;
-  width: 354px;
-  top: 0px;
-  background-color: black;
-  opacity: 0.3;
+  top: 0;
+  left: 0;
+  height: 25px;
+  width: 25px;
+  background-color: #eee;
+  border-radius: 50%;
+  :after {
+    content: '';
+    position: absolute;
+    display: none;
+  }
 `;
 
-export const WinBox = styled.div`
-  position: absolute;
-  width: 192px;
-  top: 85px;
-  left: 80px;
-  height: 160px;
-  text-align: center;
-  align-items: center;
-  justify-content: space-around;
-  border-radius: 30px;
-  border-width: 4px;
-  border-color: #400a05;
-  border-style: solid;
-  background-color: #ffde98;
-  opacity: 1;
-`
-
-export const WinTitle = styled.h2`
-  color: black;
+export const RadioContainer = styled.label`
+  display: block;
+  position: relative;
+  padding-left: 35px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  font-size: 22px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 `;
 
 export const Button = styled.button`
