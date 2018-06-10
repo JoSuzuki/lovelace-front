@@ -110,7 +110,7 @@ export const ItalicText = styled.text`
 
 const dropIn = keyframes`
   0% {
-    transform: translateY(-50%);
+    transform: translateY(-30%);
     opacity: 0;
   }
   100% {
@@ -129,5 +129,5 @@ export const CardWrapper = styled.div`
   align-items: center;
   justify-content: center; 
   flex-direction: column;
-  animation: ${dropIn} 0.5s ease-out;
+  animation: ${dropIn} 0.8s ease-out;
 `;
