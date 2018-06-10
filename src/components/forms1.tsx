@@ -46,7 +46,9 @@ export class Form1 extends React.Component <IForm1Props, IForm1State> {
                 <div className="col-3-xs">
                     <label style={{font:"Helvetica", fontSize:"20px", paddingLeft:"10px"}}>Qual o seu curso?
                     <br/>
-                        <input style={{font:"Helvetica", fontSize:"20px", paddingLeft:"10px", paddingTop:"10px"}} name="course" id="course"/>
+                    <div style={{font:"Helvetica", fontSize:"20px", paddingLeft:"10px"}}>
+                        <input style={{font:"Helvetica", fontSize:"20px"}} name="course" id="course"/>
+                    </div>
                     </label>
                     <br/>
                 </div>
