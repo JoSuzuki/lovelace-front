@@ -53,5 +53,29 @@ export const Button = styled.button`
   }
 `;
 
+export const TitleText = styled.text`
+  background-color: white;
+  text-align: center;
+  margin-top: 10px;
+  font-size: 30px;
+  font: Helvetica;
+  display: inline-block;
+  color: #000000;
+  border-radius: 25px;
+  transition-duration: 0.4s;
+`;
+
+export const StandardText = styled.text`
+  background-color: white;
+  text-align: center;
+  margin-top: 10px;
+  font-size: 20px;
+  font: Helvetica;
+  display: inline-block;
+  color: #000000;
+  border-radius: 25px;
+  transition-duration: 0.4s;
+`;
+
 
 

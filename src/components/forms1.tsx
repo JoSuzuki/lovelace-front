@@ -18,7 +18,7 @@ export class Form1 extends React.Component <IForm1Props, any> {
     return (
       <React.Fragment>
         <form>            
-            <div className="row">
+            {/*<div className="row">
                 <div className="col-3-xs">
                     <label>Gênero
                     <select onChange="handleSelectSatisfaction($event, 0)" id="gender" name="gender">
@@ -83,10 +83,10 @@ export class Form1 extends React.Component <IForm1Props, any> {
                     <label>Você faz alguma atividade extracurricular atrelada ou não a universidade? (Grupos de extensão, atlética, grêmio, IC, esportes, outros hobbies...)
                         <input onChange="handleSelectSatisfaction($event, 11)" name="activities" id="activities"/>
                     </label>
-                </div>
+    </div>
                 <button onClick={this.props.onClick} className="btn btn-info" role="button">Prosseguir</button>
-            </div>
-        </form>
+    </div>*/}
+    </form>
       </React.Fragment>
     );
   }
