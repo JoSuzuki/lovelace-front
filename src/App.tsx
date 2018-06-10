@@ -1,11 +1,17 @@
 import * as React from 'react';
 import { Summary } from './components/summary';
-// import { Introduction } from './components/introduction';
+import { Introduction } from './components/introduction';
+import { Form1 } from './components/forms1';
 
 class App extends React.Component <any, any> {
-  /* tslint:disable */
-  public state = {renderedComponent: <Summary onClick={() => this.onClickIntroduction} passou={'a'}/>}
-  /* tslint:enable */
+  // seta o estado inicial para uma div vazia
+  public state = {renderedComponent: <div/>}
+
+  constructor(props: any) {
+    super(props)
+    this.state={renderedComponent: <Summary onClick={(this.onClickIntroduction)} />}
+  }
+
   public render() {
 
     return (
@@ -16,8 +22,11 @@ class App extends React.Component <any, any> {
   }
 
   public onClickIntroduction = () => {
-    console.log('cliclou');
-    // this.setState({renderedComponent: <Introduction/>})
+    this.setState({renderedComponent: <Introduction onClick={this.onClickForm1}/>})
+  }
+
+  public onClickForm1 = () => {
+    this.setState({renderedComponent: <Form1/>})
   }
 
 }

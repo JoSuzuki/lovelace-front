@@ -1,6 +1,10 @@
 import * as React from 'react';
 
-export class Introduction extends React.Component <any, any> {
+interface IIntroductionProps {
+    onClick: () => void;
+}
+
+export class Introduction extends React.Component <IIntroductionProps, any> {
   
   public render() {
 
@@ -17,7 +21,7 @@ export class Introduction extends React.Component <any, any> {
                 <text>Criamos um formulário para compreender melhor estas dificuldades e proporcionar
                     auxílio de uma forma humana e simples.
                 </text>
-                <button className="btn btn-info" role="button">Abrir Formulário</button>
+                <button onClick={this.props.onClick} className="btn btn-info" role="button">Abrir Formulário</button>
             </div>
         </div>
       </React.Fragment>
