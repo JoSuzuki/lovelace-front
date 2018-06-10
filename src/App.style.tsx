@@ -32,17 +32,19 @@ export const WinTitle = styled.h2`
 
 export const Button = styled.button`
   background-color: white;
-  margin-top: 10px;
+  text-align: center;
+  margin: auto;
   width: 140px;
   height: 50px;
   font-size: larger;
   display: inline-block;
   cursor: pointer;
   color: #FFFFFF;
+  margin-left: 300px;
   border-radius: 25px;
   border: solid 0px;
   transition-duration: 0.4s;
-  background: linear-gradient(180deg, #734223 5%, #400a05 100%);
+  background: linear-gradient(180deg, #000000 5%, #000000 100%);
   box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
   :hover {
     box-shadow: 0 6px 20px 0 rgba(0,0,0,0.2), 0 0px 0px 0 rgba(0,0,0,0.19);;
@@ -57,6 +59,8 @@ export const TitleText = styled.text`
   background-color: white;
   text-align: center;
   margin-top: 10px;
+  margin-left: 300px;
+  margin-bottom:100px;
   font-size: 30px;
   font: Helvetica;
   display: inline-block;
@@ -68,7 +72,8 @@ export const TitleText = styled.text`
 export const StandardText = styled.text`
   background-color: white;
   text-align: center;
-  margin-top: 10px;
+  margin: auto;
+  width: 50%;
   font-size: 20px;
   font: Helvetica;
   display: inline-block;
