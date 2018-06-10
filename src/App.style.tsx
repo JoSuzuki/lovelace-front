@@ -82,5 +82,20 @@ export const StandardText = styled.text`
   transition-duration: 0.4s;
 `;
 
+export const ItalicText = styled.text`
+  background-color: white;
+  text-align: center;
+  margin: auto;
+  width: 50%;
+  font-size: 20px;
+  margin-left: 300px;
+  font: Helvetica;
+  display: inline-block;
+  color: #000000;
+  border-radius: 25px;
+  transition-duration: 0.4s;
+  font-style: italic;
+`;
+
 
 
