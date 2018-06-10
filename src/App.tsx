@@ -1,26 +1,23 @@
 import * as React from 'react';
-import axios from 'axios';
+import { Summary } from './components/summary';
+// import { Introduction } from './components/introduction';
 
 class App extends React.Component <any, any> {
-  public state={textFromServer: 'carregando'};
-  
-  public componentDidMount() {
-    axios.get('https://lovelace.localtunnel.me/getjson/')
-    .then(response => {
-      console.log(response);
-      this.setState({textFromServer: JSON.stringify(response.data)});
-    })
-    .catch(error => console.warn(error));
-  }
-  
+  /* tslint:disable */
+  public state = {renderedComponent: <Summary onClick={() => this.onClickIntroduction} passou={'a'}/>}
+  /* tslint:enable */
   public render() {
 
     return (
       <React.Fragment>
-        <div>{this.state.textFromServer}</div>
-        <div>calma que</div>
+        {this.state.renderedComponent}
       </React.Fragment>
     );
+  }
+
+  public onClickIntroduction = () => {
+    console.log('cliclou');
+    // this.setState({renderedComponent: <Introduction/>})
   }
 
 }
