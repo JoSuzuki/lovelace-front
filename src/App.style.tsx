@@ -80,7 +80,8 @@ export const StandardMiddleText = styled.text`
 
 export const StandardLeftText = styled.text`
   background-color: white;
-  font-size: 20px;
+  font-size: 30px;
+  margin-left: 150px;
   width:50%;
   font: Helvetica;
   display:inline-block;
@@ -90,10 +91,8 @@ export const StandardLeftText = styled.text`
 export const StandardRightText = styled.text`
   background-color: white;
   font-size: 20px;
-  margin-left:500px;
-  width:50%;
+  width:40%;
   font: Helvetica;
-  display:inline-block;
   color: #000000;
 `;
 
@@ -108,8 +107,8 @@ export const ItalicText = styled.text`
   background-color: white;
   font-size: 20px;
   font: Helvetica;
+  width:40%;
   color: #000000;
-  display:inline-block;
   font-style: italic;
 `;
 
