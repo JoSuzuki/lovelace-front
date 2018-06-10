@@ -1,6 +1,10 @@
 import * as React from 'react';
 
-export class Form1 extends React.Component <any, any> {
+interface IForm1Props {
+    onClick: () => void;
+}
+
+export class Form1 extends React.Component <IForm1Props, any> {
 
   public render() {
 
