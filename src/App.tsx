@@ -27,7 +27,7 @@ class App extends React.Component <any, any> {
   }
 
   public onClickForm1 = () => {
-    this.setState({renderedComponent: <Form1 onClick={this.onClickHelpFeedback}/>})
+    this.setState({renderedComponent: <Form1/>})
   }
 
   public onClickHelpFeedback = () => {

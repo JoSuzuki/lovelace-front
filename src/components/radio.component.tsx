@@ -14,7 +14,7 @@ interface IRadioState {
 export class Radio extends React.Component <IRadioProps, IRadioState> {
   constructor(props: any) {
     super(props);
-    this.state = {selectedOption: 0};
+    this.state = {selectedOption: -1};
   }
 
   
