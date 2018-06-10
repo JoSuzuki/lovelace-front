@@ -1,26 +1,37 @@
 import * as React from 'react';
-import axios from 'axios';
+import { Summary } from './components/summary';
+import { Introduction } from './components/introduction';
+import { Form1 } from './components/forms1';
+import { HelpFeedback } from './components/help.-feedback';
 
 class App extends React.Component <any, any> {
-  public state={textFromServer: 'carregando'};
-  
-  public componentDidMount() {
-    axios.get('https://lovelace.localtunnel.me/getjson/')
-    .then(response => {
-      console.log(response);
-      this.setState({textFromServer: JSON.stringify(response.data)});
-    })
-    .catch(error => console.warn(error));
+  // seta o estado inicial para uma div vazia
+  public state = {renderedComponent: <div/>}
+
+  constructor(props: any) {
+    super(props)
+    this.state={renderedComponent: <Summary onClick={(this.onClickIntroduction)} />}
   }
-  
+
   public render() {
 
     return (
       <React.Fragment>
-        <div>{this.state.textFromServer}</div>
-        <div>calma que</div>
+        {this.state.renderedComponent}
       </React.Fragment>
     );
+  }
+
+  public onClickIntroduction = () => {
+    this.setState({renderedComponent: <Introduction onClick={this.onClickForm1}/>})
+  }
+
+  public onClickForm1 = () => {
+    this.setState({renderedComponent: <Form1/>})
+  }
+
+  public onClickHelpFeedback = () => {
+    this.setState({renderedComponent: <HelpFeedback/>})
   }
 
 }
