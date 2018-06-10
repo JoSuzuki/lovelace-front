@@ -40,7 +40,6 @@ export const Button = styled.button`
   display: inline-block;
   cursor: pointer;
   color: #FFFFFF;
-  margin-left: 300px;
   border-radius: 25px;
   border: solid 0px;
   transition-duration: 0.4s;
@@ -58,9 +57,9 @@ export const Button = styled.button`
 export const TitleText = styled.text`
   background-color: white;
   text-align: center;
-  margin-top: 10px;
+  margin-top: 100px;
   margin-left: 300px;
-  margin-bottom:100px;
+  margin-bottom:50px;
   font-size: 30px;
   font: Helvetica;
   display: inline-block;
@@ -75,6 +74,7 @@ export const StandardText = styled.text`
   margin: auto;
   width: 50%;
   font-size: 20px;
+  margin-left: 300px;
   font: Helvetica;
   display: inline-block;
   color: #000000;

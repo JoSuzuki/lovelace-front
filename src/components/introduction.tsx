@@ -1,4 +1,5 @@
 import * as React from 'react';
+import { StandardText } from '../App.style';
 
 interface IIntroductionProps {
     onClick: () => void;
@@ -12,7 +13,7 @@ export class Introduction extends React.Component <IIntroductionProps, any> {
       <React.Fragment>
         <div className="row">
             <div className="col-6-xs">
-                <text>Ajuda</text>
+                <StandardText>Ajuda</StandardText>
                 <text>"Talvez o problema não seja você, as vezes é difícil seguir em frente"
                 </text>
                 <text>Mas se você se sente assim, saiba que você não está sozinho e que há solução</text>                
