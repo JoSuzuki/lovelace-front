@@ -2,7 +2,6 @@ import * as React from 'react';
 import { Summary } from './components/summary';
 import { Introduction } from './components/introduction';
 import { Form1 } from './components/forms1';
-import { Form2 } from './components/forms2';
 import { HelpFeedback } from './components/help.-feedback';
 
 class App extends React.Component <any, any> {
@@ -28,11 +27,7 @@ class App extends React.Component <any, any> {
   }
 
   public onClickForm1 = () => {
-    this.setState({renderedComponent: <Form1 onClick={this.onClickForm2}/>})
-  }
-
-  public onClickForm2 = () => {
-    this.setState({renderedComponent: <Form2 onClick={this.onClickHelpFeedback}/>})
+    this.setState({renderedComponent: <Form1 onClick={this.onClickHelpFeedback}/>})
   }
 
   public onClickHelpFeedback = () => {
