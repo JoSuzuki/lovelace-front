@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled, { keyframes } from 'styled-components';
 
 export const RadioSpan = styled.span`
   position: absolute;
@@ -108,7 +108,15 @@ export const ItalicText = styled.text`
   font-style: italic;
 `;
 
-
+const dropIn = keyframes`
+  0% {
+    transform: translateY(-50%);
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+`;
 
 export const CardWrapper = styled.div`
   align-self: center; 
@@ -121,4 +129,5 @@ export const CardWrapper = styled.div`
   align-items: center;
   justify-content: center; 
   flex-direction: column;
+  animation: ${dropIn} 0.5s ease-out;
 `;
