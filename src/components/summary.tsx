@@ -1,5 +1,6 @@
 import * as React from 'react';
-import {StandardMiddleText, TitleText, Button} from '../App.style'
+import {StandardMiddleText, TitleText, Button, Img} from '../App.style';
+import logo from '../assets/logo.png';
 
 interface ISummaryProps {
     onClick: () => void;
@@ -12,7 +13,7 @@ export class Summary extends React.Component <ISummaryProps, any> {
     return (
       <React.Fragment>
         <div className="row">
-          <link href="../assets/logo.png"/>
+          <Img src={logo}/>
         </div>
         <div className="row">
             <div className="col-sm-12">

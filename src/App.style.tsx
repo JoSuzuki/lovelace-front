@@ -57,7 +57,7 @@ export const Button = styled.button`
 
 export const TitleText = styled.text`
   background-color: white;
-  margin-top: 100px;
+  margin-top: 50px;
   margin-left: 300px;
   margin-bottom:50px;
   font-size: 30px;
@@ -74,6 +74,8 @@ export const StandardMiddleText = styled.text`
   font: Helvetica;
   display:inline-block;
   color: #000000;
+  text-align: justify;
+  text-justify: inter-word;
 `;
 
 export const StandardLeftText = styled.text`
@@ -94,6 +96,13 @@ export const StandardRightText = styled.text`
   display:inline-block;
   color: #000000;
 `;
+
+export const Img = styled.img`
+height:auto;
+margin-left:550px;
+width:150px;
+`;
+
 
 export const ItalicText = styled.text`
   background-color: white;
