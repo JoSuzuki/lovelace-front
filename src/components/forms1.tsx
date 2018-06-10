@@ -1,9 +1,10 @@
 import * as React from 'react';
 import { Radio } from './radio.component';
 import axios from 'axios';
+import { Button } from '../App.style';
 
 interface IForm1Props {
-    onClick?: () => void;
+    onClick: (percentage: number) => void;
 }
 
 interface IForm1State {
@@ -34,7 +35,7 @@ export class Form1 extends React.Component <IForm1Props, IForm1State> {
       <React.Fragment>
             <div className="row">
                 <div className="col-3-xs">
-                    <label>Gênero
+                    <label style={{font:"Helvetica", fontSize:"20px", paddingLeft:"10px"}}>Gênero
                     <Radio
                         radioOptions={['Homem', 'Mulher', 'Outro']}
                         changeSelectOptions={this.handleSelectGender}
@@ -43,12 +44,16 @@ export class Form1 extends React.Component <IForm1Props, IForm1State> {
                     </label>
                 </div>
                 <div className="col-3-xs">
-                    <label>Qual o seu curso?
-                        <input name="course" id="course"/>
+                    <label style={{font:"Helvetica", fontSize:"20px", paddingLeft:"10px"}}>Qual o seu curso?
+                    <br/>
+                    <div style={{font:"Helvetica", fontSize:"20px", paddingLeft:"10px"}}>
+                        <input style={{font:"Helvetica", fontSize:"20px"}} name="course" id="course"/>
+                    </div>
                     </label>
+                    <br/>
                 </div>
                 <div className="col-3-xs">
-                    <label>Qual sua média na faculdade?
+                    <label style={{font:"Helvetica", fontSize:"20px", paddingLeft:"10px"}}>Qual sua média na faculdade?
                         <Radio
                             radioOptions={[
                                 'De 0.0 a 0.5',
@@ -78,7 +83,7 @@ export class Form1 extends React.Component <IForm1Props, IForm1State> {
                     </label>
                 </div>
                 <div className="col-3-xs">
-                    <label>Qual o seu nível de satisfação com o curso?
+                    <label style={{font:"Helvetica", fontSize:"20px", paddingLeft:"10px"}}>Qual o seu nível de satisfação com o curso?
                         <Radio
                             radioOptions={['1', '2', '3', '4', '5']}
                             changeSelectOptions={this.handleSelectCourseSatisfaction}
@@ -86,7 +91,7 @@ export class Form1 extends React.Component <IForm1Props, IForm1State> {
                     </label>
                 </div>
                 <div className="col-3-xs">
-                    <label>Qual o seu nível de satisfação com a vida em geral?
+                    <label style={{font:"Helvetica", fontSize:"20px", paddingLeft:"10px"}}>Qual o seu nível de satisfação com a vida em geral?
                         <Radio
                             radioOptions={['1', '2', '3', '4', '5']}
                             changeSelectOptions={this.handleSelectLifeSatisfaction}
@@ -94,7 +99,7 @@ export class Form1 extends React.Component <IForm1Props, IForm1State> {
                     </label>
                 </div>
                 <div className="col-3-xs">
-                    <label>O Curso atendeu as suas expectativas?
+                    <label style={{font:"Helvetica", fontSize:"20px", paddingLeft:"10px"}}>O Curso atendeu as suas expectativas?
                         <Radio
                             radioOptions={['Não', 'Sim']}
                             changeSelectOptions={this.handleSelectCourseExpectation}
@@ -103,7 +108,7 @@ export class Form1 extends React.Component <IForm1Props, IForm1State> {
                     </label>
                 </div>
                 <div className="col-3-xs">
-                    <label>Você se sentiu pressionado a escolher o seu curso (pais, família, amigos,...) ?
+                    <label style={{font:"Helvetica", fontSize:"20px", paddingLeft:"10px"}}>Você se sentiu pressionado a escolher o seu curso (pais, família, amigos,...) ?
                         <Radio
                             radioOptions={['Não', 'Sim']}
                             changeSelectOptions={this.handleSelectPressionedByFriends}
@@ -112,7 +117,7 @@ export class Form1 extends React.Component <IForm1Props, IForm1State> {
                     </label>
                 </div>
                 <div className="col-3-xs">
-                    <label>Você acha que escolheu o curso certo para você?
+                    <label style={{font:"Helvetica", fontSize:"20px", paddingLeft:"10px"}}>Você acha que escolheu o curso certo para você?
                         <Radio
                             radioOptions={['Não', 'Sim']}
                             changeSelectOptions={this.handleSelectChooseRightCourse}
@@ -121,7 +126,7 @@ export class Form1 extends React.Component <IForm1Props, IForm1State> {
                     </label>
                 </div>
                 <div className="col-3-xs">
-                    <label>Você tem dificuldade financeira para continuar o seu curso? 
+                    <label style={{font:"Helvetica", fontSize:"20px", paddingLeft:"10px"}}>Você tem dificuldade financeira para continuar o seu curso? 
                         <Radio
                             radioOptions={['Não', 'Sim']}
                             changeSelectOptions={this.handleSelectFinancialDifficulty}
@@ -130,7 +135,7 @@ export class Form1 extends React.Component <IForm1Props, IForm1State> {
                     </label>
                 </div>
                 <div className="col-3-xs">
-                    <label>Você faz alguma atividade extracurricular atrelada ou não a universidade? (Grupos de extensão, atlética, grêmio, IC, esportes, outros hobbies...)
+                    <label style={{font:"Helvetica", fontSize:"20px", paddingLeft:"10px"}}>Você faz alguma atividade extracurricular atrelada ou não a universidade? (Grupos de extensão, atlética, grêmio, IC, esportes, outros hobbies...)
                         <Radio
                             radioOptions={['Não', 'Sim']}
                             changeSelectOptions={this.handleSelectExtracurricularActivity}
@@ -138,7 +143,9 @@ export class Form1 extends React.Component <IForm1Props, IForm1State> {
                         />                    
                     </label>
                 </div>
-                <button onClick={this.handleSendData}>Prosseguir</button>
+                <div style={{paddingBottom:"10px", paddingLeft:"10px"}}>
+                    <Button onClick={this.handleSendData}>Prosseguir</Button>
+                </div>
          </div>
       </React.Fragment>
     );
@@ -191,6 +198,7 @@ export class Form1 extends React.Component <IForm1Props, IForm1State> {
         })
         .then(response => {
           console.log(response);
+          this.props.onClick(response.data.chanceOfEvasion);
         //   this.setState({text: JSON.stringify(response.data)});
         })
         .catch(error => console.warn(error));

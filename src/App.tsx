@@ -27,11 +27,11 @@ class App extends React.Component <any, any> {
   }
 
   public onClickForm1 = () => {
-    this.setState({renderedComponent: <Form1/>})
+    this.setState({renderedComponent: <Form1 onClick={this.onClickHelpFeedback} />})
   }
 
-  public onClickHelpFeedback = () => {
-    this.setState({renderedComponent: <HelpFeedback/>})
+  public onClickHelpFeedback = (percentage: number) => {
+    this.setState({renderedComponent: <HelpFeedback percentage={percentage}/>})
   }
 
 }
