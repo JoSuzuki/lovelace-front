@@ -3,7 +3,7 @@ import { Radio } from './radio.component';
 import axios from 'axios';
 
 interface IForm1Props {
-    onClick?: () => void;
+    onClick: (percentage: number) => void;
 }
 
 interface IForm1State {
@@ -191,6 +191,7 @@ export class Form1 extends React.Component <IForm1Props, IForm1State> {
         })
         .then(response => {
           console.log(response);
+          this.props.onClick(response.data.chanceOfEvasion);
         //   this.setState({text: JSON.stringify(response.data)});
         })
         .catch(error => console.warn(error));
