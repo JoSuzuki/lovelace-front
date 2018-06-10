@@ -1,4 +1,5 @@
 import * as React from 'react';
+import { TitleText, StandardMiddleText } from '../App.style';
 
 export class HelpFeedback extends React.Component <any, any> {
 
@@ -7,18 +8,12 @@ export class HelpFeedback extends React.Component <any, any> {
     return (
       <React.Fragment>
         <div className="row">
-            <div className="col-6-xs">
-                <text>Ajuda 222222222222</text>
-                <text>"Talvez o problema não seja você, as vezes é difícil seguir em frente"
-                </text>
-                <text>Mas se você se sente assim, saiba que você não está sozinho e que há solução</text>                
-            </div>
-            <div className="col-6-xs">
-                <text>Criamos um formulário para compreender melhor estas dificuldades e proporcionar
-                    auxílio de uma forma humana e simples.
-                </text>
-                <button onClick={this.props.onClick} className="btn btn-info" role="button">Abrir Formulário</button>
-            </div>
+        <TitleText>{"Parece que você tem alguns problemas em sua graduação ):"}
+        </TitleText>
+        <StandardMiddleText>{"Mas, não se preocupe, você não é o único"}
+        </StandardMiddleText>   
+        <StandardMiddleText>{"Auxilio"}
+        </StandardMiddleText>   
         </div>
       </React.Fragment>
     );

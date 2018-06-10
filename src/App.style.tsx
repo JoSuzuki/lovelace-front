@@ -36,11 +36,12 @@ export const Button = styled.button`
   margin: auto;
   width: 140px;
   height: 50px;
+  margin-top:100px;
+  margin-left:550px;
   font-size: larger;
   display: inline-block;
   cursor: pointer;
   color: #FFFFFF;
-  border-radius: 25px;
   border: solid 0px;
   transition-duration: 0.4s;
   background: linear-gradient(180deg, #000000 5%, #000000 100%);
@@ -56,44 +57,50 @@ export const Button = styled.button`
 
 export const TitleText = styled.text`
   background-color: white;
-  text-align: center;
   margin-top: 100px;
   margin-left: 300px;
   margin-bottom:50px;
   font-size: 30px;
+  display:inline-block;
   font: Helvetica;
-  display: inline-block;
   color: #000000;
-  border-radius: 25px;
-  transition-duration: 0.4s;
 `;
 
-export const StandardText = styled.text`
+export const StandardMiddleText = styled.text`
   background-color: white;
-  text-align: center;
-  margin: auto;
-  width: 50%;
   font-size: 20px;
-  margin-left: 300px;
+  margin-left:300px;
+  width:50%;
   font: Helvetica;
-  display: inline-block;
+  display:inline-block;
   color: #000000;
-  border-radius: 25px;
-  transition-duration: 0.4s;
+`;
+
+export const StandardLeftText = styled.text`
+  background-color: white;
+  font-size: 20px;
+  width:50%;
+  font: Helvetica;
+  display:inline-block;
+  color: #000000;
+`;
+
+export const StandardRightText = styled.text`
+  background-color: white;
+  font-size: 20px;
+  margin-left:500px;
+  width:50%;
+  font: Helvetica;
+  display:inline-block;
+  color: #000000;
 `;
 
 export const ItalicText = styled.text`
   background-color: white;
-  text-align: center;
-  margin: auto;
-  width: 50%;
   font-size: 20px;
-  margin-left: 300px;
   font: Helvetica;
-  display: inline-block;
   color: #000000;
-  border-radius: 25px;
-  transition-duration: 0.4s;
+  display:inline-block;
   font-style: italic;
 `;
 
