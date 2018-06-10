@@ -34,8 +34,6 @@ export const Button = styled.button`
   margin: auto;
   width: 140px;
   height: 50px;
-  margin-top:100px;
-  margin-left:550px;
   font-size: larger;
   display: inline-block;
   cursor: pointer;
@@ -95,9 +93,9 @@ export const StandardRightText = styled.text`
 `;
 
 export const Img = styled.img`
-height:auto;
-margin-left:550px;
-width:150px;
+  height:auto;
+  margin-left:550px;
+  width:150px;
 `;
 
 
@@ -112,3 +110,15 @@ export const ItalicText = styled.text`
 
 
 
+export const CardWrapper = styled.div`
+  align-self: center; 
+  border: solid;
+  border-width: 2px;
+  border-radius: 10px;
+  border-color:gray;
+  width: 80;
+  display: flex;
+  align-items: center;
+  justify-content: center; 
+  flex-direction: column;
+`;
