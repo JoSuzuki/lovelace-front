@@ -1,6 +1,7 @@
 import * as React from 'react';
 import { Radio } from './radio.component';
 import axios from 'axios';
+import { Button } from '../App.style';
 
 interface IForm1Props {
     onClick: (percentage: number) => void;
@@ -138,7 +139,7 @@ export class Form1 extends React.Component <IForm1Props, IForm1State> {
                         />                    
                     </label>
                 </div>
-                <button onClick={this.handleSendData}>Prosseguir</button>
+                <Button onClick={this.handleSendData}>Prosseguir</Button>
          </div>
       </React.Fragment>
     );
