@@ -33,7 +33,7 @@ export const RadioContainer = styled.label`
   margin-bottom: 12px;
   text-align: left;
   cursor: pointer;
-  font-size: 22px;
+  font-size: 16px;
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;

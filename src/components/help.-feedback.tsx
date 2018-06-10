@@ -14,6 +14,7 @@ export class HelpFeedback extends React.Component <IHelpFeedbackProps, any> {
       <React.Fragment>
         <div style={{display: "flex", flexDirection: "column", alignItems:"flex-start"}}>
           <img style={{padding: "50px", width:'150px', height: "auto", alignSelf: "center"}}src={logo}/>
+          <div style={{alignSelf: "center"}}>A sua chance de largar é: {this.props.percentage*100}%</div>
           {this.props.percentage > 0.5 ?
           <React.Fragment>
           <div style={{display: "flex", alignSelf: 'center', paddingTop: '20px'}}>
