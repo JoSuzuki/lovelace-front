@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { Button } from '../App.style';
+import { Button, CardWrapper } from '../App.style';
 import logo from '../assets/logo.png';
 
 interface ISummaryProps {
@@ -14,8 +14,8 @@ export class Summary extends React.Component <ISummaryProps, any> {
       <React.Fragment>
         <div style={{display: "flex", flexDirection: "column", alignItems:"flex-start"}}>
           <img style={{padding: "50px", width:'150px', height: "auto", alignSelf: "center"}}src={logo}/>
-          
-          <div style={{alignSelf: 'center', border: 'solid', borderWidth: '2px', borderRadius: '10px', borderColor:'gray', width: '80%', display: 'flex', alignItems: 'center', justifyContent: 'center', flexDirection: 'column'}}>
+
+          <CardWrapper>
 
             <div style={{alignSelf: 'center', fontSize: '30px', padding: '20px', paddingTop: '35px'}}>
               Na graduação passamos por momentos difíceis
@@ -26,7 +26,7 @@ export class Summary extends React.Component <ISummaryProps, any> {
             <div className="col-sm-12" style={{alignSelf: 'center', padding: '20px'}}>
               <Button onClick={this.props.onClick}className="btn btn-info" role="button">AJUDA</Button>
             </div>
-          </div>
+          </CardWrapper>
           
         </div>
       </React.Fragment>

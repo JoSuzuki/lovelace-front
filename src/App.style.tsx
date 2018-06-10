@@ -116,7 +116,7 @@ export const CardWrapper = styled.div`
   border-width: 2px;
   border-radius: 10px;
   border-color:gray;
-  width: 80;
+  width: 80%;
   display: flex;
   align-items: center;
   justify-content: center; 
